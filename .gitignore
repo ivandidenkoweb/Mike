@@ -1,0 +1,13 @@
+node_modules/
+.DS_Store
+.idea
+*.ai
+*.log
+*.pdf
+*.psd
+*.sublime*
+build/
+npm-debug.*
+source/css/*.css
+Thumbs.db
+

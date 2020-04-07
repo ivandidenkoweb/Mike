@@ -1,0 +1,54 @@
+@OpenSansBold: 'OpenSans-Bold', sans-serif;
+@OpenSansExtraBold: 'OpenSans-ExtraBold', sans-serif;
+@OpenSansSemiBold: 'OpenSans-SemiBold', sans-serif;
+@OpenSansLight: 'OpenSans-Light', sans-serif;
+@VarelaRegular: 'Varela-Regular', sans-serif;
+@MyriadProRegular: 'MyriadPro-Regular', sans-serif;
+@white: #ffffff;
+@blue: rgb(25, 111, 192);
+@darkblue: rgb(0, 75, 145);
+
+.logo {
+    display: block;
+    border: 4px solid @white;
+    width: 56px;
+    height: 56px;
+    position: relative;
+    transform: rotate(45deg);
+
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+        top: 23px;
+        left: -31px;
+        display: block;
+        width: 110px;
+        height: 4px;
+        background: linear-gradient(90deg,
+                rgba(255, 255, 255, 1) 0%,
+                rgba(255, 255, 255, 1) 25%,
+                rgba(9, 9, 121, 0) 25%, rgba(7, 57, 152, 0) 75%,
+                rgba(255, 255, 255, 1) 75%,
+                rgba(255, 255, 255, 1) 100%);
+    }
+
+    &::after {
+        transform: rotate(90deg);
+    }
+
+    &_label {
+        margin: 13px 0 0 0;
+        width: 25px;
+        height: 25px;
+        border: 2px solid @white;
+
+        &::after,
+        &::before {
+            width: 50px;
+            height: 2px;
+            top: 10px;
+            left: -15px;
+        }
+    }
+}
