@@ -1,0 +1,193 @@
+.welcome {
+    padding: 0 0 125px 0;
+    background-color: @white;
+
+    &-title {
+        margin: 86px 0 0 0;
+        color: @blue;
+        text-align: center;
+        font-family: @MyriadProRegular;
+        font-size: 32px;
+        line-height: 38px;
+        letter-spacing: 0.07em;
+        text-transform: uppercase;
+    }
+
+    &-subtitle {
+        margin: 5px auto 0 auto;
+        width: 310px;
+        position: relative;
+        color: @grey;
+        text-align: center;
+        font-family: @VarelaRegular;
+        font-size: 16px;
+        line-height: 22px;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+
+        &::before,
+        &::after {
+            content: '';
+            display: block;
+            width: 20px;
+            height: 1px;
+            position: absolute;
+            top: 50%;
+            background-color: @grey;
+            transform: translateY(-50%);
+        }
+
+        &::before {
+            left: 0;
+        }
+
+        &::after {
+            right: 0;
+        }
+    }
+
+    &-advantages {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        margin: 100px 0 0 0;
+
+        &-logo {
+            margin: 6px 45px 0 46px;
+            position: relative;
+
+            &::before,
+            &::after {
+                content: '';
+                display: block;
+                width: 50px;
+                height: 1px;
+                position: absolute;
+                top: 99px;
+                background-color: rgb(204, 204, 204);
+            }
+
+            &::before {
+                left: -136px;
+            }
+
+            &::after {
+                right: -136px;
+            }
+        }
+    }
+
+    &-item {
+        width: 380px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: center;
+
+        &:not(:first-child) {
+            margin: 93px 0 0 0;
+        }
+
+        &_left {
+            text-align: right;
+        }
+
+        &_right {
+            text-align: left;
+        }
+
+        &-description {
+            width: 300px;
+        }
+
+        &-title {
+            margin: -8px 0 0 0;
+            font-family: @OpenSansSemiBold;
+            font-size: 16px;
+            line-height: 20px;
+            letter-spacing: -0.03em;
+            text-transform: uppercase;
+        }
+
+        &-text {
+            margin: 17px 0 0 0;
+            font-family: @OpenSansLight;
+            font-size: 12px;
+            line-height: 18px;
+        }
+
+        &-img {
+            margin: 14px;
+            width: 20px;
+            height: 20px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            transform: rotate(-45deg);
+
+            &_star {
+                background-image: url('../img/welcome-star-icon.svg');
+            }
+
+            &_heart {
+                background-image: url('../img/welcome-heart-icon.svg');
+            }
+
+            &_laptop {
+                background-image: url('../img/welcome-laptop-icon.svg');
+            }
+
+            &_lifering {
+                background-image: url('../img/welcome-lifering-icon.svg');
+            }
+        }
+    }
+
+    &-logo {
+        width: 198px;
+        height: 198px;
+        position: relative;
+        background-color: @blue;
+        box-shadow: 3px 3px 0px 3px @lightgrey;
+        transform: rotate(45deg);
+
+        &-img {
+            transform: translate(5%, 130%) rotate(-45deg);
+
+            &::before,
+            &::after {
+                content: '';
+                display: block;
+                width: 13px;
+                height: 2px;
+                position: absolute;
+                top: 8px;
+                background-color: @white;
+            }
+
+            &::before {
+                left: -44px;
+            }
+
+            &::after {
+                right: -40px;
+            }
+
+
+            &-wrap {
+                display: flex;
+
+                &::after {
+                    content: '';
+                    display: block;
+                    border: 5px solid transparent;
+                    border-right: 5px solid @white;
+                    position: absolute;
+                    top: 50%;
+                    right: 7px;
+                    transform: translateY(-50%);
+                }
+            }
+        }
+    }
+}
