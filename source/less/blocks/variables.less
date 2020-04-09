@@ -53,6 +53,7 @@
             left: -14px;
         }
     }
+
     &_welcome {
         width: 75px;
         height: 75px;
@@ -71,10 +72,62 @@
     }
 }
 
+.section {
+    &-title {
+        color: @blue;
+        text-align: center;
+        font-family: @MyriadProRegular;
+        font-size: 32px;
+        line-height: 38px;
+        letter-spacing: 0.07em;
+        text-transform: uppercase;
+    }
+
+    &-subtitle {
+        color: @grey;
+        text-align: center;
+        font-family: @VarelaRegular;
+        font-size: 16px;
+        line-height: 22px;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+
+        &::before,
+        &::after {
+            content: '';
+            display: block;
+            width: 20px;
+            height: 1px;
+            position: absolute;
+            top: 50%;
+            background-color: @grey;
+            transform: translateY(-50%);
+        }
+
+        &::before {
+            left: 0;
+        }
+
+        &::after {
+            right: 0;
+        }
+    }
+}
+
+
+
 .rhombus {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 50px;
     height: 50px;
     border: 1px solid rgb(235, 235, 235);
     box-shadow: 3px 3px 0px 0px rgb(235, 235, 235);
     transform: rotate(45deg);
+
+    &_about-1 {
+        width: 80px;
+        height: 80px;
+    }
 }
