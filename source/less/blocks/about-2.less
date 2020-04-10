@@ -1,0 +1,121 @@
+.about-2 {
+    padding: 73px 0 78px 0;
+    background-color: rgb(246, 246, 246);
+
+    &-inner {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    &-video {
+        width: 524px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &-skills {
+        width: 570px;
+    }
+
+    &-subtitle {
+        width: 100%;
+        padding: 0 0 15px 0;
+        margin: 0 0 38px 0;
+        position: relative;
+        font-family: @OpenSansBold;
+        font-size: 17px;
+        line-height: 20px;
+        letter-spacing: -0.02em;
+        text-transform: uppercase;
+
+        &:after {
+            content: '';
+            display: block;
+            width: 40px;
+            height: 1px;
+            position: absolute;
+            left: 0;
+            top: 100%;
+            background-color: rgb(187, 187, 187);
+        }
+    }
+
+    &-player {
+        width: 100%;
+    }
+
+    &-text {
+        width: 100%;
+        margin: 25px 0 0 0;
+        font-family: @OpenSansLight;
+        font-size: 13px;
+        line-height: 22px;
+    }
+
+    &-skill {
+        font-family: @VarelaRegular;
+        font-size: 13px;
+        text-transform: uppercase;
+    }
+
+    &-line {
+        width: 525px;
+        margin: 6px 0 29px 0;
+        height: 10px;
+        background-color: rgb(85, 85, 85);
+
+        &-current {
+            height: 10px;
+            position: relative;
+            background-color: @blue;
+
+            &:before {
+                content: attr(data-current);
+                display: block;
+                position: absolute;
+                top: -26px;
+                right: 0;
+                font-family: @VarelaRegular;
+                font-size: 13px;
+                line-height: 16px;
+                letter-spacing: -0.03em;
+            }
+
+            &:after {
+                content: '';
+                display: block;
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 0 15px 20px 15px;
+                border-color: transparent transparent @blue transparent;
+                filter: drop-shadow(5px 0 0 @white);
+            }
+
+            &_web-design {
+                width: 90%;
+            }
+
+            &_photo {
+                width: 80%;
+            }
+
+            &_mobile {
+                width: 95%;
+            }
+
+            &_games {
+                width: 65%;
+            }
+
+            &_video {
+                width: 70%;
+            }
+        }
+    }
+}
