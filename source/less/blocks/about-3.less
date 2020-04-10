@@ -1,0 +1,125 @@
+.about-3 {
+    padding: 100px 0 50px 0;
+    background-color: @white;
+
+    &-list {
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+    }
+
+    &-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 130px;
+        cursor: pointer;
+
+        &:not(:last-child) .about-3-rhombus:after {
+            content: '';
+            display: block;
+            width: 84px;
+            height: 1px;
+            position: absolute;
+            bottom: 100%;
+            left: 100%;
+            background-color: rgb(238, 238, 238);
+            transform-origin: top left;
+            transform: rotate(-45deg);
+        }
+
+        &:not(:last-child) {
+            margin: 0 85px 0 0;
+        }
+
+        &:hover .about-3-rhombus {
+            background-color: @blue;
+            box-shadow: none;
+        }
+
+        &:hover .about-3-text {
+            color: @blue;
+        }
+
+        &:hover .about-3-rhombus-number {
+            color: @white;
+        }
+
+        &:hover .about-3-rhombus-img_rocket {
+            background-image: url('../img/rocket-icon_white.svg');
+        }
+
+        &:hover .about-3-rhombus-img_trophy {
+            background-image: url('../img/trophy-icon_white.svg');
+        }
+
+        &:hover .about-3-rhombus-img_plane {
+            background-image: url('../img/plane-icon_white.svg');
+        }
+
+        &:hover .about-3-rhombus-img_clock {
+            background-image: url('../img/clock-icon_white.svg');
+        }
+
+        &:hover .about-3-rhombus-img_coffee {
+            background-image: url('../img/coffee-icon_white.svg');
+        }
+    }
+
+    &-rhombus {
+        position: relative;
+
+        &-inner {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            transform: rotate(-45deg);
+        }
+
+        &-img {
+            width: 20px;
+            height: 20px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+
+            &_rocket {
+                background-image: url('../img/rocket-icon.svg');
+            }
+
+            &_trophy {
+                background-image: url('../img/trophy-icon.svg');
+            }
+
+            &_plane {
+                background-image: url('../img/plane-icon.svg');
+            }
+
+            &_clock {
+                background-image: url('../img/clock-icon.svg');
+            }
+
+            &_coffee {
+                background-image: url('../img/coffee-icon.svg');
+            }
+        }
+
+        &-number {
+            width: 100%;
+            margin: 5px 0 0 0;
+            font-family: @VarelaRegular;
+            font-size: 28px;
+            line-height: 38px;
+            text-align: center;
+        }
+    }
+
+    &-text {
+        margin: 49px 0 0 0;
+        font-family: @VarelaRegular;
+        font-size: 12px;
+        line-height: 16px;
+        letter-spacing: -0.02em;
+        text-transform: uppercase;
+    }
+}
