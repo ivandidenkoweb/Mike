@@ -1,0 +1,128 @@
+.reviews {
+    padding: 86px 0 0 0;
+    background-color: @white;
+    color: @white;
+
+    &-title {
+        font-family: @OpenSansRegular;
+        font-size: 28px;
+        letter-spacing: -0.03em;
+    }
+
+    &-subtitle {
+        margin: 4px auto 50px auto;
+        width: 650px;
+        letter-spacing: 0.18em;
+    }
+
+    &-wrap {
+        padding: 68px 0 0 0;
+        background-color: @blue;
+    }
+
+    &-inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+
+        &_left .reviews-btn-img {
+            background-image: url('../img/left-icon_white.svg');
+        }
+
+        &_right .reviews-btn-img {
+            background-image: url('../img/right-icon_white.svg');
+        }
+
+        &:hover {
+            border: 1px solid rgb(204, 204, 204);
+            background-color: @white;
+        }
+
+        &_left:hover .reviews-btn-img {
+            background-image: url('../img/left-icon.svg');
+        }
+
+        &_right:hover .reviews-btn-img {
+            background-image: url('../img/right-icon.svg');
+        }
+    }
+
+    &-btn-img {
+        display: block;
+        width: 15px;
+        height: 15px;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        transform: rotate(-45deg);
+    }
+
+    &-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    &-img {
+        width: 120px;
+        height: 120px;
+        clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+        background-image: url('../img/reviews-img.png');
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    &-text {
+        width: 970px;
+        margin: 34px 0 31px 0;
+        font-family: @OpenSansRegular;
+        font-size: 14px;
+        line-height: 24px;
+        letter-spacing: -0.02em;
+    }
+
+    &-author {
+        display: flex;
+        padding: 28px 0 66px 0;
+        position: relative;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        font-family: @VarelaRegular;
+
+        &:before {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 1px;
+            background-color: @white;
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);    
+
+        }
+    }
+
+    &-name {
+        margin: 0px 0 4px 0;
+        font-size: 14px;
+        line-height: 16px;
+        letter-spacing: -0.02em;
+    }
+
+    &-company {
+        font-size: 10px;
+        line-height: 14px;
+        text-transform: uppercase;
+    }
+}

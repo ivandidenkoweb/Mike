@@ -78,12 +78,14 @@
 
     &-item {
         width: 20%;
+        height: 161px;
         padding: 35px 0 25px 0;
         display: flex;
         flex-direction: column;
         align-items: center;
         background-color: @white;
         cursor: pointer;
+        transition: background-color 0.2s;
 
         &:nth-child(2n) {
             background-color: rgb(251, 251, 251);
@@ -180,6 +182,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        transition: width 0.2s, height 0.2s, margin 0.2s;
 
         &-img {
             width: 22px;
@@ -188,6 +191,7 @@
             background-position: center;
             background-repeat: no-repeat;
             transform: rotate(-45deg);
+            transition: transform 0.2s, width 0.2s, height 0.2s, background-image 0.2s;
         }
     }
 
@@ -198,12 +202,17 @@
         line-height: 16px;
         letter-spacing: -0.03em;
         text-transform: uppercase;
+        transition: display 0.2s;
     }
 
     &-slide {
         display: flex;
         justify-content: space-between;
         padding: 60px 0 0 0;
+
+        &.hidden {
+            display: none;
+        }
 
         &-description {
             width: 39%;
