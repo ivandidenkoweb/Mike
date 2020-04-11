@@ -2,6 +2,7 @@
 @OpenSansExtraBold: 'OpenSans-ExtraBold', sans-serif;
 @OpenSansSemiBold: 'OpenSans-SemiBold', sans-serif;
 @OpenSansLight: 'OpenSans-Light', sans-serif;
+@OpenSansRegular: 'OpenSans-Regular', sans-serif;
 @VarelaRegular: 'Varela-Regular', sans-serif;
 @MyriadProRegular: 'MyriadPro-Regular', sans-serif;
 @white: #ffffff;
@@ -84,6 +85,7 @@
     }
 
     &-subtitle {
+        position: relative;
         color: @grey;
         text-align: center;
         font-family: @VarelaRegular;
@@ -123,6 +125,7 @@
     width: 50px;
     height: 50px;
     border: 1px solid rgb(235, 235, 235);
+    background-color: @white;
     box-shadow: 3px 3px 0px 0px rgb(235, 235, 235);
     transform: rotate(45deg);
 
@@ -134,5 +137,17 @@
     &_about-3 {
         width: 92px;
         height: 92px;
+    }
+
+    &_btn {
+        width: 25px;
+        height: 25px;
+        border: 1px solid rgb(204, 204, 204);
+        box-shadow: none;
+    }
+
+    &_main-services {
+        border: 1px solid rgb(221, 221, 221);
+        box-shadow: none;
     }
 }

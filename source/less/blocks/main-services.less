@@ -1,0 +1,260 @@
+.main-services {
+    padding: 50px 0 0 0;
+    background-color: @white;
+
+    &-title {
+        margin: 0 0 5px 0;
+    }
+
+    &-subtitle {
+        width: 450px;
+        margin: 0 auto;
+    }
+
+    &-slider {
+        background-color: rgb(238, 238, 238);
+
+        &-inner {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 62px 0 0 0;
+        }
+    }
+
+    &-buttons {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 62px;
+        margin: 77px 0 49px 0;
+    }
+
+    &-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+
+        &_left .main-services-btn-img {
+            background-image: url('../img/left-icon.svg');
+        }
+
+        &_right .main-services-btn-img {
+            background-image: url('../img/right-icon.svg');
+        }
+
+        &:hover {
+            border: 1px solid @white;
+            background-color: @blue;
+        }
+
+        &_left:hover .main-services-btn-img {
+            background-image: url('../img/left-icon_white.svg');
+        }
+
+        &_right:hover .main-services-btn-img {
+            background-image: url('../img/right-icon_white.svg');
+        }
+    }
+
+    &-btn-img {
+        display: block;
+        width: 15px;
+        height: 15px;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        transform: rotate(-45deg);
+    }
+
+    &-list {
+        width: 1150px;
+        display: flex;
+        justify-content: center;
+        border-bottom: 3px solid @blue;
+    }
+
+    &-item {
+        width: 20%;
+        padding: 35px 0 25px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: @white;
+        cursor: pointer;
+
+        &:nth-child(2n) {
+            background-color: rgb(251, 251, 251);
+        }
+
+        &:not(:last-child) {
+            border-right: 1px solid rgb(238, 238, 238);
+        }
+
+        &_video .main-services-rhombus-img {
+            background-image: url('../img/video-icon.svg');
+        }
+
+        &_camera .main-services-rhombus-img {
+            background-image: url('../img/camera-icon.svg');
+        }
+
+        &_desktop .main-services-rhombus-img {
+            background-image: url('../img/desktop-icon.svg');
+        }
+
+        &_apple .main-services-rhombus-img {
+            background-image: url('../img/apple-icon.svg');
+        }
+
+        &_twitter .main-services-rhombus-img {
+            background-image: url('../img/twitter-icon.svg');
+        }
+
+        &_active.main-services-item,
+        &:hover {
+            position: relative;
+            background-color: @blue;
+            border-right: none;
+
+            &:after {
+                content: '';
+                display: block;
+                position: absolute;
+                top: 100%;
+                left: 50%;
+                width: 0;
+                height: 0;
+                border-left: 23px solid transparent;
+                border-right: 23px solid transparent;
+                border-top: 18px solid @blue;
+                transform: translate(-50%);
+            }
+
+            & .main-services-service {
+                display: none;
+            }
+
+            & .main-services-rhombus {
+                width: 78px;
+                height: 78px;
+                margin: 7px 0 0 0;
+                border: none;
+            }
+
+            & .main-services-rhombus-img {
+                width: 35px;
+                height: 35px;
+            }
+        }
+
+        &_active.main-services-item_video .main-services-rhombus-img,
+        &_video:hover .main-services-rhombus-img {
+            background-image: url('../img/video-icon_blue.svg');
+        }
+
+        &_active.main-services-item_camera .main-services-rhombus-img,
+        &_camera:hover .main-services-rhombus-img {
+            background-image: url('../img/camera-icon_blue.svg');
+        }
+
+        &_active.main-services-item_desktop .main-services-rhombus-img,
+        &_desktop:hover .main-services-rhombus-img {
+            background-image: url('../img/desktop-icon_blue.svg');
+        }
+
+        &_active.main-services-item_apple .main-services-rhombus-img,
+        &_apple:hover .main-services-rhombus-img {
+            background-image: url('../img/apple-icon_blue.svg');
+        }
+
+        &_active.main-services-item_twitter .main-services-rhombus-img,
+        &_twitter:hover .main-services-rhombus-img {
+            background-image: url('../img/twitter-icon_blue.svg');
+        }
+    }
+
+    &-rhombus {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &-img {
+            width: 22px;
+            height: 22px;
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            transform: rotate(-45deg);
+        }
+    }
+
+    &-service {
+        margin: 35px 0 0 0;
+        font-family: @OpenSansSemiBold;
+        font-size: 14px;
+        line-height: 16px;
+        letter-spacing: -0.03em;
+        text-transform: uppercase;
+    }
+
+    &-slide {
+        display: flex;
+        justify-content: space-between;
+        padding: 60px 0 0 0;
+
+        &-description {
+            width: 39%;
+            margin: 0 0 0 10px;
+        }
+
+        &-title {
+            margin: 48px 0 23px 0;
+            font-family: @OpenSansRegular;
+            font-size: 28px;
+            line-height: 34px;
+            letter-spacing: -0.04em;
+        }
+
+        &-text {
+            font-family: @MyriadProRegular;
+            font-size: 13px;
+            line-height: 22px;
+            letter-spacing: 0.03em;
+        }
+
+        &-link {
+            display: block;
+            margin: 41px 0 0 0;
+            padding: 22px 0 0 0;
+            position: relative;
+            font-family: @VarelaRegular;
+            font-size: 11px;
+            line-height: 13px;
+            color: rgb(153, 153, 153);
+            text-transform: uppercase;
+            text-decoration: none;
+
+            &:before {
+                content: '';
+                display: block;
+                width: 50px;
+                height: 1px;
+                position: absolute;
+                bottom: 100%;
+                left: 0;
+                background-color: rgb(153, 153, 153);
+            }
+
+            &:hover {
+                color: @blue;
+            }
+        }
+
+        &-img {
+            margin: 0 -5px 0 0;
+        }
+    }
+}
