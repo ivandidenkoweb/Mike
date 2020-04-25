@@ -15,7 +15,7 @@ var runSequence = require("run-sequence");
 var server = require("browser-sync").create();
 
 gulp.task("style", function () {
-  gulp.src("source/less/style.less")
+  return gulp.src("source/less/style.less")
     .pipe(plumber())
     .pipe(less())
     .pipe(postcss([
@@ -90,17 +90,13 @@ gulp.task("serve", function() {
     // ui: false
   });
 
-  gulp.watch("source/less/**/*.less", ["style"]);
+  gulp.watch("source/less/**/*.less", gulp.series("style"));
+  gulp.watch("source/*.html", gulp.series("html"));
   gulp.watch("source/*.html").on("change", server.reload);
+  gulp.watch("build/*.html").on("change", server.reload);
+  gulp.watch("build/css/*.css").on("change", server.reload);
 });
 
-gulp.task("build", function(done){
-  runSequence(
-    "clean",
-    "copy",
-    "style",
-    "sprite",
-    "html",
-    done
-    );
-});
+
+gulp.task("build", gulp.series("clean", "copy", "style", "sprite", "html"));
+

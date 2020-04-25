@@ -1,0 +1,174 @@
+.works {
+    padding: 88px 0 101px 0;
+    background-color: @white;
+
+    &-title {
+        margin: 0 0 5px 0;
+    }
+
+    &-subtitle {
+        width: 450px;
+        margin: 0 auto;
+    }
+
+    &-list {
+        display: flex;
+        margin: 63px 0 0 0;
+        border-top: 1px solid rgb(238, 238, 238);
+        border-bottom: 3px solid @blue;
+    }
+
+    &-item {
+        display: flex;
+
+        &:not(:last-child) &-link {
+            border-right: 1px solid rgb(238, 238, 238);
+
+            &_active,
+            &:hover {
+                border-right-style: none;
+            }
+        }
+
+        &-link,
+        .works-sort {
+            padding: 14px 30px;
+            font-family: @VarelaRegular;
+            font-size: 11px;
+            line-height: 16px;
+            color: rgb(102, 102, 102);
+            text-transform: uppercase;
+            text-decoration: none;
+        }
+
+        .works-sort {
+            padding: 14px 45px 14px 20px;
+            border: none;
+            appearance: none;
+
+            &:focus {
+                outline: none;
+            }
+        }
+
+        &-link {
+            position: relative;
+
+            &:after {
+                content: '';
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 50%;
+                border-left: 20px solid transparent;
+                border-right: 20px solid transparent;
+                border-top: 15px solid @blue;
+                transform: translate(-50%);
+            }
+
+            &_active,
+            &:hover {
+                background-color: @blue;
+                color: @white;
+
+                &:after {
+                    display: block;
+                }
+            }
+        }
+
+        &:last-child {
+            margin: 0 0 0 auto;
+            border-left: 1px solid rgb(238, 238, 238);
+            position: relative;
+
+            svg {
+                position: absolute;
+                top: 50%;
+                right: 15px;
+                transform: translateY(-50%);
+                background-color: @white;
+                color: @blue;
+                pointer-events: none;
+            }
+        }
+    }
+
+    &-gallery {
+        margin: 40px 0 0 0;
+        display: flex;
+        flex-wrap: wrap;
+
+        &-item {
+            width: 292px;
+            height: 250px;
+            position: relative;
+            cursor: pointer;
+
+            &:hover .works-gallery-description {
+                display: flex;
+            }
+
+            &-plus {
+                display: flex;
+
+                & svg {
+                    color: rgb(84, 84, 84);
+                    transform: rotate(45deg);
+                }
+            }
+        }
+
+        &-description {
+            display: none;
+            flex-direction: column;
+            flex-wrap: wrap;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: rgba(25, 111, 192, 0.8);
+
+            &-link {
+                margin: auto auto;
+            }
+
+            &-text {
+                align-self: flex-end;
+                padding: 26px 0 7px 0;
+                width: 100%;
+                text-align: center;
+                background-color: @white;
+            }
+
+            &-title {
+                font-family: @OpenSansSemiBold;
+                font-size: 16px;
+                line-height: 19px;
+                letter-spacing: -0.03em;
+                text-transform: uppercase;
+            }
+
+            &-subtitle {
+                margin: 4px 0 0 0;
+                font-family: @VarelaRegular;
+                font-size: 12px;
+                line-height: 16px;
+                color: rgb(187, 187, 187);
+                text-transform: uppercase;
+            }
+        }
+    }
+
+    &-rhombus {
+        &:hover {
+            background-color: @blue;
+            box-shadow: none;
+
+            svg {
+                color: @white;
+            }
+        }
+    }
+}
