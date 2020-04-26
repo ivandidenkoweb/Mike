@@ -1,0 +1,109 @@
+.contact {
+    padding: 94px 0 50px 0;
+
+    &-subtitle {
+        margin: 5px auto 68px auto;
+        width: 450px;
+    }
+
+    &-form {
+        width: 870px;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        &-title {
+            padding: 0 0 17px 0;
+            margin: 0 0 56px 0;
+            width: 100%;
+            position: relative;
+            text-align: center;
+            font-family: @OpenSansBold;
+            font-size: 17px;
+            line-height: 19px;
+            text-transform: uppercase;
+            
+            &:after {
+                content: '';
+                display: block;
+                width: 40px;
+                height: 1px;
+                position: absolute;
+                top: 100%;
+                left: 50%;
+                background-color: rgb(187, 187, 187);
+                transform: translate(-50%);
+            }
+        }
+    }
+
+    &-item {
+        width: 270px;
+        position: relative;
+
+        &_message {
+            margin: 46px 0 42px 0;
+            width: 870px;
+
+            input {
+                margin: 53px 0 0 0;
+            }
+        }
+    }
+
+    &-label {
+        position: absolute;
+        top: 0;
+        left: 8px;
+        font-family: @VarelaRegular;
+        font-size: 12px;
+        line-height: 19px;
+        color: rgb(102, 102, 102);
+        text-transform: uppercase;
+        pointer-events: none;
+        transition: 0.2s ease all;
+    }
+
+    &-input {
+        width: 100%;
+        padding: 5px;
+        border: none;
+        border-bottom: 1px solid rgb(221, 221, 221);
+        font-family: @VarelaRegular;
+        font-size: 12px;
+        line-height: 19px;
+        color: @blue;
+        text-transform: uppercase;
+
+        &:focus,
+        &:valid {
+            border-bottom: 1px solid @blue;
+            outline: none;
+            
+            & + label {
+                font-size: 8px;
+                transform: translateY(-100%);
+            }
+        }
+    }
+
+    &-btn {
+        padding: 17px 0 15px 0;
+        width: 870px;
+        border: 1px solid rgb(221, 221, 221);
+        font-family: @VarelaRegular;
+        font-size: 14px;
+        line-height: 17px;
+        color: black;
+        text-transform: uppercase;
+        background-color: @white;
+        cursor: pointer;
+
+        &:hover {
+            border: 1px solid @white;
+            color: @white;
+            background-color: @blue;
+        }
+    }
+}
