@@ -1,0 +1,145 @@
+.map {
+
+    &-wrap {
+        position: relative;
+    }
+
+    svg {
+        display: block;
+        margin: 0 auto;
+        fill: rgb(204, 204, 204);
+        cursor: pointer;
+
+        #north_america,
+        #asia {
+            position: relative;
+        }
+
+        #north_america:hover,
+        #asia:hover {
+            fill: @lightgrey;
+        }
+
+        #north_america:hover~.map-pin {
+            // content: 'Branch Office';
+            background-color: @blue;
+        }
+
+        #asia:hover~.map-pin {
+            content: 'Head Office';
+        }
+    }
+
+    &-pin {
+        width: 184px;
+        height: 89px;
+        position: absolute;
+        background-color: black;
+
+        &[data-location="Branch office"] {
+            top: 152px;
+            left: 145px;
+        }
+
+        &[data-location="Head office"] {
+            top: 204px;
+            right: 356px;
+        }
+
+        &:after {
+            content: '';
+            display: block;
+            position: absolute;
+            right: 32px;
+            border: 8px solid transparent;
+            border-top: 8px solid black;
+            border-right: 8px solid black;
+        }
+
+        &-inner {
+            display: flex;
+            padding: 15px 25px 15px 6px;
+            height: 100%;
+            position: relative;
+            color: @white;
+
+            &:before {
+                content: attr(data-location);
+                position: absolute;
+                bottom: -24px;
+                right: 0;
+                font-family: @OpenSansSemiBold;
+                font-size: 14px;
+                line-height: 20px;
+                color: black;
+                text-transform: uppercase;
+                transform: translateX(100%);
+            }
+
+            &:after {
+                content: '';
+                display: block;
+                width: 106px;
+                border-bottom: 1px solid @blue;
+                position: absolute;
+                right: -93px;
+                bottom: -27px;
+                font-family: @OpenSansSemiBold;
+                font-size: 14px;
+                line-height: 20px;
+                color: black;
+                text-transform: uppercase;
+            }
+        }
+
+        &-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        address {
+            margin: 0 0 6px 0;
+            font-family: @MyriadProRegular;
+            font-size: 10px;
+            text-transform: uppercase;
+            font-style: normal;
+            letter-spacing: 0.1em;
+        }
+
+        &-link-tel,
+        &-link-mail {
+            font-family: @MyriadProRegular;
+            font-size: 10px;
+            letter-spacing: 0.1em;
+            color: @white;
+            text-decoration: none;
+        }
+
+        &-link-tel:hover,
+        &-link-mail:hover {
+            color: @blue;
+        }
+
+        &-link-map {
+            position: absolute;
+            bottom: -25px;
+            left: 0px;
+            font-family: @OpenSansRegular;
+            font-size: 10px;
+            line-height: 20px;
+            letter-spacing: 0.01em;
+            color: black;
+            text-decoration: none;
+
+            &:hover {
+                color: @blue;
+            }
+        }
+
+        &-rhombus {
+            position: absolute;
+            bottom: -34px;
+            right: 15px;
+        }
+    }
+}
