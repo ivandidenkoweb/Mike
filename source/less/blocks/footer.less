@@ -1,0 +1,77 @@
+.footer {
+    margin: 0 0 212px 0;
+    padding: 75px 0 75px 0;
+    border-bottom: 1px solid rgb(221, 221, 221);
+    position: relative;
+    
+    &-list {
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        width: 636px;
+    }
+
+    &-link {
+        font-family: @OpenSansRegular;
+        font-size: 13px;
+        line-height: 16px;
+        letter-spacing: -0.02em;
+        color: @grey;
+        text-transform: uppercase;
+        text-decoration: none;
+        transition: all 0.2s;
+
+        &:hover {
+            color: @blue;
+        }
+    }
+
+    &-decor {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 50%);
+    }
+
+    &-rhombus {
+        position: relative;
+
+        &:before,
+        &:after {
+            content: '';
+            display: block;
+            width: 20px * 0.72;
+            height: 20px * 0.72;
+            border-top: 2px solid @white;
+            border-left: 2px solid @white;
+            position: absolute;
+            background-color: transparent;
+        }
+        
+        &:before {
+            top: 13px;
+            left: 13px;
+        }
+
+        &:after {
+            top: 18px;
+            left: 18px;
+        }
+    }
+
+    &-copyright {
+        position: absolute;
+        bottom: -73px;
+        left: 50%;
+        font-family: @OpenSansRegular;
+        font-size: 13px;
+        line-height: 20px;
+        color: grey;
+        text-decoration: none;
+        transform: translate(-50%);
+
+        &:hover {
+            color: @blue;
+        }
+    }
+}
