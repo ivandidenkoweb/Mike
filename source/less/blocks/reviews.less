@@ -32,35 +32,18 @@
         align-items: center;
         cursor: pointer;
 
-        &_left .reviews-btn-img {
-            background-image: url('../img/left-icon_white.svg');
-        }
-
-        &_right .reviews-btn-img {
-            background-image: url('../img/right-icon_white.svg');
-        }
-
         &:hover {
             border: 1px solid rgb(204, 204, 204);
             background-color: @white;
-        }
 
-        &_left:hover .reviews-btn-img {
-            background-image: url('../img/left-icon.svg');
-        }
-
-        &_right:hover .reviews-btn-img {
-            background-image: url('../img/right-icon.svg');
+            svg {
+                color: @blue;
+            }
         }
     }
 
-    &-btn-img {
-        display: block;
-        width: 15px;
-        height: 15px;
-        background-size: contain;
-        background-position: center;
-        background-repeat: no-repeat;
+    svg {
+        color: @white;
         transform: rotate(-45deg);
     }
 

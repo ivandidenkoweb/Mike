@@ -95,31 +95,16 @@
             border-right: 1px solid rgb(238, 238, 238);
         }
 
-        &_video .main-services-rhombus-img {
-            background-image: url('../img/video-icon.svg');
-        }
-
-        &_camera .main-services-rhombus-img {
-            background-image: url('../img/camera-icon.svg');
-        }
-
-        &_desktop .main-services-rhombus-img {
-            background-image: url('../img/desktop-icon.svg');
-        }
-
-        &_apple .main-services-rhombus-img {
-            background-image: url('../img/apple-icon.svg');
-        }
-
-        &_twitter .main-services-rhombus-img {
-            background-image: url('../img/twitter-icon.svg');
-        }
-
         &_active.main-services-item,
         &:hover {
             position: relative;
             background-color: @blue;
             border-right: none;
+
+            svg {
+                width: 40px;
+                height: 40px;
+            }
 
             &:after {
                 content: '';
@@ -151,31 +136,6 @@
                 height: 35px;
             }
         }
-
-        &_active.main-services-item_video .main-services-rhombus-img,
-        &_video:hover .main-services-rhombus-img {
-            background-image: url('../img/video-icon_blue.svg');
-        }
-
-        &_active.main-services-item_camera .main-services-rhombus-img,
-        &_camera:hover .main-services-rhombus-img {
-            background-image: url('../img/camera-icon_blue.svg');
-        }
-
-        &_active.main-services-item_desktop .main-services-rhombus-img,
-        &_desktop:hover .main-services-rhombus-img {
-            background-image: url('../img/desktop-icon_blue.svg');
-        }
-
-        &_active.main-services-item_apple .main-services-rhombus-img,
-        &_apple:hover .main-services-rhombus-img {
-            background-image: url('../img/apple-icon_blue.svg');
-        }
-
-        &_active.main-services-item_twitter .main-services-rhombus-img,
-        &_twitter:hover .main-services-rhombus-img {
-            background-image: url('../img/twitter-icon_blue.svg');
-        }
     }
 
     &-rhombus {
@@ -184,12 +144,7 @@
         align-items: center;
         transition: width 0.2s, height 0.2s, margin 0.2s;
 
-        &-img {
-            width: 22px;
-            height: 22px;
-            background-size: contain;
-            background-position: center;
-            background-repeat: no-repeat;
+        svg {
             transform: rotate(-45deg);
             transition: transform 0.2s, width 0.2s, height 0.2s, background-image 0.2s;
         }

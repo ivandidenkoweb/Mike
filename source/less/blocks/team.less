@@ -118,48 +118,16 @@
         align-items: center;
         justify-content: center;
 
-        &_facebook {
-            & .team-social-img {
-                background-image: url('../img/facebook-icon_white.svg');
-            }
-            
-            &:hover .team-social-img {
-                background-image: url('../img/facebook-icon_blue.svg');
-            }
-        } 
-
-        &_twitter {
-            & .team-social-img {
-                background-image: url('../img/twitter-icon_white.svg');
-            }
-            
-            &:hover .team-social-img {
-                background-image: url('../img/twitter-icon_blue.svg');
-            }
-        } 
-
-        &_linkedin {
-            & .team-social-img {
-                background-image: url('../img/linkedin-icon_white.svg');
-            }
-            
-            &:hover .team-social-img {
-                background-image: url('../img/linkedin-icon_blue.svg');
-            }
-        } 
-
-        &_another {
-            & .team-social-img {
-                background-image: url('../img/another-icon_white.svg');
-            }
-            
-            &:hover .team-social-img {
-                background-image: url('../img/another-icon_blue.svg');
-            }
-        } 
+        svg {
+            color: @white;
+        }
 
         &:hover {
             background-color: @white;
+
+            svg {
+                color: @blue;
+            }
         }
     }
 

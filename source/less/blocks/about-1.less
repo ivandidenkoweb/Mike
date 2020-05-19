@@ -44,31 +44,6 @@
             margin: 0 30px 0 0;
         }
 
-        &-img {
-            width: 35px;
-            height: 35px;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: contain;
-            transform: rotate(-45deg);
-
-            &_heart {
-                background-image: url('../img/heart-icon.svg');
-            }
-
-            &_code {
-                background-image: url('../img/code-icon.svg');
-            }
-
-            &_arrow {
-                background-image: url('../img/arrow-icon.svg');
-            }
-
-            &_star {
-                background-image: url('../img/star-icon.svg');
-            }
-        }
-
         &-rhombus {
 
             &-inner {
@@ -79,11 +54,19 @@
                 height: 90%;
                 border: 2px solid @white;
             }
+
+            svg {
+                transform: rotate(-45deg);
+            }
         }
 
         &:hover .about-1-item-rhombus {
             background-color: @blue;
             box-shadow: none;
+
+            svg {
+                color: @white;
+            }
         }
 
         &:hover .about-1-item-title {
@@ -92,22 +75,6 @@
 
         &:hover .about-1-link-text {
             color: @blue;
-        }
-
-        &_heart:hover .about-1-item-img {
-            background-image: url('../img/heart-icon_white.svg');
-        }
-
-        &_code:hover .about-1-item-img {
-            background-image: url('../img/code-icon_white.svg');
-        }
-
-        &_arrow:hover .about-1-item-img {
-            background-image: url('../img/arrow-icon_white.svg');
-        }
-
-        &_star:hover .about-1-item-img {
-            background-image: url('../img/star-icon_white.svg');
         }
 
         &-title {
